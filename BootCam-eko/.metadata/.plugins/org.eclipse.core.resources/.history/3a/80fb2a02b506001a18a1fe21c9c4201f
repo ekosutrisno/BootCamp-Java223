@@ -1,0 +1,23 @@
+package Pertemuan1;
+
+import java.util.Scanner;
+
+public class Latihan8 {
+
+	public static void main(String[] args) {
+		Scanner input = new Scanner(System.in);
+		System.out.println("Masukkan Panjang Array: ");
+		int inp = input.nextInt();
+		
+		ambilArray(inp);
+		input.close();
+	}
+
+	private static int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for (int i = 0; i < hasil.length; i++) {
+		}
+		return hasil;
+	}
+
+}

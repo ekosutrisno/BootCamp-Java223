@@ -1,0 +1,95 @@
+//Join Tabel Tradisional
+select
+mhs.nama_mahasiswa,
+uji.nama_ujian,
+nilai.nilai
+from "transaction".nilai as nilai, "transaction".mahasiswa as mhs, master.ujian as uji
+where nilai.kode_mahasiswa=mhs.kode_mahasiswa and nilai.kode_ujian=uji.kode_ujian;
+
+//Join Tabel dan mengambil mahasiswa yang lebih dari rata-rata
+select
+mhs.nama_mahasiswa,
+uji.nama_ujian,
+nilai.nilai
+from transaction.nilai as nilai, transaction.mahasiswa as mhs, master.ujian as uji
+where nilai.kode_mahasiswa=mhs.kode_mahasiswa 
+and nilai.kode_ujian=uji.kode_ujian
+and nilai.nilai>(Select avg(nilai) from transaction.nilai);
+
+//Menggunakan cara yang lebih modern dengan
+select
+mhs.nama_mahasiswa,
+uji.nama_ujian,
+nilai.nilai
+from transaction.nilai as nilai
+JOIN transaction.mahasiswa as mhs ON nilai.kode_mahasiswa=mhs.kode_mahasiswa
+JOIN master.ujian as uji ON nilai.kode_ujian = uji.kode_ujian
+WHERE nilai.nilai > (SELECT avg(nilai) from transaction.nilai);
+
+-----------------------------------------------------------------------------------------------------------------
+//Jawaban Soal no 2
+ALTER TABLE transaction.dosen ALTER COLUMN nama_dosen TYPE character varying(200);
+
+//jawaban Soal no 3
+select
+mhs.kode_mahasiswa,
+mhs.nama_mahasiswa,
+jur.nama_jurusan,
+agm.deskripsi
+from transaction.mahasiswa as mhs
+JOIN master.jurusan as jur ON jur.kode_jurusan = mhs.kode_jurusan
+JOIN master.agama as agm ON agm.kode_agama=mhs.kode_agama
+where kode_mahasiswa='M001'
+
+
+//jawaban No 4
+select
+mhs.nama_mahasiswa,
+jur.nama_jurusan,
+jur.status_jurusan
+from "transaction".mahasiswa as mhs
+LEFT JOIN master.jurusan as jur ON jur.kode_jurusan = mhs.kode_jurusan
+where status_jurusan='Non Aktif'
+
+//Jawaban no 5
+select
+mhs.nama_mahasiswa,
+nilai.nilai,
+uji.status_ujian
+from transaction.mahasiswa as mhs
+JOIN transaction.nilai as nilai ON nilai.kode_mahasiswa = mhs.kode_mahasiswa
+JOIN master.ujian as uji ON uji.kode_ujian = nilai.kode_ujian
+where nilai.nilai>'80' and uji.status_ujian='Aktif'
+
+//jawaban soal no 6
+SELECT
+*
+FROM master.jurusan as jur
+where jur.nama_jurusan like 'Sistem%'
+
+//jawban Soal no 7
+SELECT
+mhs.kode_mahasiswa,
+mhs.nama_mahasiswa
+FROM transaction.mahasiswa as mhs
+JOIN transaction.nilai as nilai ON nilai.kode_mahasiswa = mhs.kode_mahasiswa
+JOIN master.ujian as uji ON uji.kode_ujian = nilai.kode_ujian
+GROUP BY mhs.kode_mahasiswa,mhs.nama_mahasiswa
+HAVING (count(nilai.kode_ujian))>1
+
+//Jawaban Soal no 8
+SELECT
+mhs.kode_mahasiswa,
+mhs.nama_mahasiswa,
+jur.nama_jurusan,
+agm.deskripsi,
+dsn.nama_dosen,
+jur.status_jurusan,
+tdsn.deskripsi
+FROM transaction.mahasiswa as mhs
+JOIN master.jurusan as jur ON jur.kode_jurusan=mhs.kode_jurusan
+JOIN master.agama as agm ON agm.kode_agama = mhs.kode_agama
+JOIN transaction.dosen as dsn ON dsn.kode_jurusan=jur.kode_jurusan
+JOIN master.type_dosen as tdsn ON  dsn.kode_type_dosen= tdsn.kode_typedosen
+where mhs.kode_mahasiswa ='M001'
+

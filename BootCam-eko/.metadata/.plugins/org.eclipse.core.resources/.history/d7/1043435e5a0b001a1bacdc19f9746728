@@ -1,0 +1,35 @@
+package LatihanSoal;
+
+public class Soal3 {
+	public static void main(String[] args) {
+		ududD("udududud");
+	}
+
+	public static void ududD(String str) {
+		String[] myStr = str.split(" ");
+		int naik = 0;
+		int turun = 0;
+		int cek = 0;
+		for (int a = 0; a < myStr.length; a++) {
+			if (str.equalsIgnoreCase("U")) {
+				if (cek == 0) {
+					cek++;
+					naik++;
+				} else {
+					cek++;
+				}
+			} else if (str.equalsIgnoreCase("D")) {
+				if (cek == 0) {
+					cek--;
+					turun++;
+				} else {
+					cek--;
+				}
+			} else {
+				System.out.println("Tidak Ada Hurup 'U' atau 'D'");
+			}
+		}
+		System.out.println("Naik: " + naik + "\nTurun" + turun);
+
+	}
+}

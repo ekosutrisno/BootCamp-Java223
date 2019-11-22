@@ -1,0 +1,21 @@
+package LatihanSoal;
+
+public class Soal5 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	public static void fibonaci_2(int angka) {
+		int fn=0;
+		int fn1=1;
+		int fn2=0;
+		for(int i=1;i<angka;i++) {
+			fn=fn1+fn2;
+			fn1=fn2;
+			fn2=fn;
+			System.out.println(fn);
+		}
+	}
+}

@@ -1,0 +1,11 @@
+package com.main;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		System.out.println("==== WELCOME TO MY APP PRODUK MANAGER ====");
+		System.out.println("---------------MENU UTAMA-----------------");
+		System.out.println("1.\tInfo Produk\n2.\tInfo Kategori\n3.Info Varian\n4.\tOrder Detail Info\n5. \tOrder Header Info");
+	}
+
+}

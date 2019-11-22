@@ -1,0 +1,34 @@
+package LatihanSoal;
+
+import java.util.Scanner;
+
+public class promoGojek {
+
+	private static Scanner inputUser;
+
+	public static void main(String[] args) {
+		// inisialisasi variabel
+		double harga, promo, pajak, min_beli;
+		int maks_jarak = 5;
+		min_beli = 30000;
+		promo = 0.5;
+		pajak = 0.1;
+
+		// Memanggil Scanner
+		inputUser = new Scanner(System.in);
+		System.out.print("Masukkan Jumlah pembelian: ");
+		harga = inputUser.nextDouble();
+
+		if (harga >= min_beli) {
+			double diskon = harga * promo;
+			double bayar_pajak = harga * pajak;
+			double bayar = (harga - diskon) + pajak;
+			System.out.println(bayar);
+
+		}else {
+			System.out.println("OK");
+		}
+
+	}
+
+}

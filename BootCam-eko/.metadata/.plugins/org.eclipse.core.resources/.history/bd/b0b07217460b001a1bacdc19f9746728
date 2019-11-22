@@ -1,0 +1,27 @@
+package LatihanSoal;
+
+import java.util.Scanner;
+
+public class Soal1 {
+	private static Scanner inputUser;
+
+	public static void main(String[] args) {
+		inputUser = new Scanner(System.in);
+		System.out.print("Masukkan Angka: ");
+		int inputAngka = inputUser.nextInt();
+		pohonFakor(inputAngka);
+
+	}
+
+	public static int pohonFakor(int angka) {
+		int faktor = 1;
+		for (int i = 1; i <= angka; i++) {
+			if (angka % 2 == 0) {
+				faktor = angka / i;
+				System.out.print(faktor+" ");
+			}
+		}
+		return faktor;
+	}
+
+}

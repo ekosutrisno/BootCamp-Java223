@@ -1,0 +1,26 @@
+package Pertemuan1;
+
+public class Latihan4 {
+
+	public static void main(String[] args) {
+		matrik(4);
+	}
+
+	private static int matrik(int x) {
+
+		for (int a = 0; a < x; a++) {
+			for (int b = 0; b < x; b++) {
+				
+				if (a == b) {
+					System.out.print("0 ");
+				}else if (a < b) {
+					System.out.print("1 ");
+				}else {
+					System.out.print("2 ");
+				}
+			}
+			System.out.println();
+		}
+		return x;
+	}
+}

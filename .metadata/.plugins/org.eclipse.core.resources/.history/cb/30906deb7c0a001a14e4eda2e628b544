@@ -1,0 +1,55 @@
+package Pertemuan2;
+
+public class LatihanSoalB {
+
+	public static void main(String[] args) {
+		soal01();
+		System.out.println();
+		soal02();
+		System.out.println();
+		soal03();
+	}
+
+	private static void soal01() {
+		int data = 1;
+		for (int a = 0; a <= 7; a++) {
+			if (a == 0) {
+				a = 1;
+				System.out.print(a + " ");
+			} else {
+				int b = data * 3;
+				System.out.print(b + " ");
+				data = b;
+			}
+		}
+	}
+
+	private static void soal02() {
+		int data = 1;
+		for (int a = 0; a < 7; a++) {
+			if (a == 0) {
+				System.out.print(data + " ");
+			} else {
+				int b = data * 3;
+				if (data == 9 && b == 243) {
+					System.out.print("-" + b + " ");
+
+				}
+				data = b;
+				System.out.print(b + " ");
+			}
+		}
+	}
+
+	private static void soal03() {
+		int data = 1;
+		for (int a = 0; a < 7; a++) {
+			if(a<7) {
+				int b = data*2 - a;
+				System.out.print(b+" ");
+				data =b;
+			}
+		}
+	}
+
+}

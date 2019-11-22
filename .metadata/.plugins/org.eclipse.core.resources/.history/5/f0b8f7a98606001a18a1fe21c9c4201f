@@ -1,0 +1,23 @@
+package Pertemuan1;
+
+public class Latihan3 {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	
+	private static int tampilKotak(int x) {
+		
+		for (int a = 1; a < 2; a++) {
+			for (int b = 1; b < 10; b++) {
+				System.out.print(b + " ");
+				if (b % 3 == 0) {
+					System.out.println();
+				}
+			}
+		}
+		
+		return 0;
+	}
+}

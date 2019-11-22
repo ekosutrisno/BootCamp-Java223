@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;BootcampA1&apos; to &apos;Bootcamp-EKO&apos;&#x0D;&#x0A;- Original element: &apos;BootcampA1&apos;&#x0D;&#x0A;- Renamed element: &apos;BootcampA1&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;BootcampA1&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=BootcampA1" name="Bootcamp-EKO" references="true" stamp="1573634155362" version="1.0"/>
+</session>

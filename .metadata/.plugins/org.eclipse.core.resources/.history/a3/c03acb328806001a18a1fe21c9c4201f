@@ -1,0 +1,13 @@
+package Pertemuan1;
+
+public class Latihan4 {
+
+	public static void main(String[] args) {
+
+		for (int a = 0; a < 4; a++) {
+System.out.println(a);
+		}
+
+	}
+
+}

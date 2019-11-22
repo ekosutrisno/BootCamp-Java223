@@ -1,0 +1,29 @@
+package Pertemuan1;
+
+public class ArrayMultiDimensi {
+	static void main(String[] args) {
+
+		int matrikA[][] = { { 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 7 } };
+
+		for (int a = 0; a < matrikA.length; a++) {
+
+			for (int b = 0; b < matrikA[a].length; b++) {
+				System.out.print(matrikA[a][b]);
+			}
+			System.out.println();
+		}
+
+	}
+
+	public void printArrayMD(int[][] arr) {
+		for (int a = 0; a < arr.length; a++) {
+
+			for (int b = 0; b < arr[a].length; b++) {
+				System.out.print(arr[a][b]);
+			}
+			System.out.println();
+		}
+
+	}
+	
+}

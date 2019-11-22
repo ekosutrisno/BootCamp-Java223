@@ -1,0 +1,13 @@
+package com.main;
+
+import com.data.Mahasiswa;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Mahasiswa mhs = new Mahasiswa();
+		mhs.setNama("Eko");
+		System.out.println(mhs.getNama());
+	}
+
+}

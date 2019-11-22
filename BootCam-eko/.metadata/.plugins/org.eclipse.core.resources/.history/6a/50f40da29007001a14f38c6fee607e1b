@@ -1,0 +1,18 @@
+package ArrayPackage;
+
+import java.util.Scanner;
+
+public class Array5 {
+
+	public int[][] inputMatrik(int[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				Scanner scn = new Scanner(System.in);
+				System.out.print("Element Matrik ke [" + i + "][" + j + "] : ");
+				arr[i][j] = scn.nextInt();
+			}
+		}
+		return arr;
+	}
+	
+}

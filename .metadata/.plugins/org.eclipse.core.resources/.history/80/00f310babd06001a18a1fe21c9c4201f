@@ -1,0 +1,8 @@
+package ArrayPackage;
+
+
+//Membuat variabel Public
+
+public class Array2 {
+	public String str = "Ada Apa Dengan Cinta";
+}

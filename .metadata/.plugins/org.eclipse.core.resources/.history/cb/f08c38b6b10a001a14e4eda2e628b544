@@ -1,0 +1,109 @@
+package Pertemuan2;
+
+public class LatihanSoalD {
+
+	public static void main(String[] args) {
+		String a = "makan";
+		String b = "kama n";
+		String str = "cat cat";
+
+		firstHalf(str);
+		System.out.println();
+
+		lastTwo(str);
+		System.out.println();
+
+		doubleChar(str);
+		System.out.println();
+
+		System.out.println(catDog(str));
+		System.out.println();
+
+		anagram(a, b);
+		System.out.println();
+
+		makeOutWord("<<>>", "makan");
+		String k1 = b.replace(" ", "");
+		System.out.println(k1);
+
+	}
+
+	public static void anagram(String kata_1, String kata_2) {
+		String k1 = kata_1.replace(" ", "");
+		String k2 = kata_2.replace(" ", "");
+		int pjg;
+		int pjg1 = kata_1.length();
+		int pjg2 = kata_2.length();
+		int ada = 0, tidak = 0;
+		System.out.println(k1);
+		System.out.println(k2);
+
+		if (pjg1 == pjg2) {
+			pjg = pjg1;
+
+			for (int i = 0; i < pjg; i++) {
+				ada = 0;
+				for (int j = 0; j < pjg; j++) {
+					if (k1.charAt(i) == k2.charAt(j)) {
+						ada = 1;
+						break;
+					}
+				}
+				if (ada == 0) {
+					tidak = 1;
+					break;
+				}
+			}
+			if (tidak == 1) {
+				System.out.println("Bukan Anagram!");
+
+			} else {
+				System.out.println("Yeeeeieee...Anagram.");
+			}
+		} else {
+			System.out.println("Panjang Kata Tidak Sama!");
+		}
+	}
+
+	public static void makeOutWord(String str1, String str2) {
+		int a = str1.length();
+		String kata1 = str1.substring(0, a / 2);
+		String kata2 = str1.substring(a / 2, a);
+		System.out.println(kata1 + str2 + kata2);
+	}
+
+	public static void firstHalf(String str) {
+		String data = "";
+		int a = str.length();
+		data = str.substring(0, a / 2);
+		System.out.println(data);
+	}
+
+	public static void lastTwo(String str) {
+		int panjang = str.length();
+		String kata1 = str.substring(panjang - 1, panjang);
+		String kata2 = str.substring(panjang - 2, panjang - 1);
+		String hasil = str.substring(0, panjang - 2);
+		System.out.println(hasil + kata1 + kata2);
+	}
+
+	public static void doubleChar(String str) {
+		int panjang = str.length();
+		for (int i = 0; i < panjang; i++) {
+			System.out.print(str.charAt(i) + "" + str.charAt(i) + "");
+		}
+	}
+
+	public static boolean catDog(String str) {
+		String kata = str.toLowerCase();
+		if (kata.contains("cat") && kata.contains("dog"))
+			return true;
+		else
+			return false;
+	}
+	public static String replaceInput(String input, String separator) {
+		String spl = input.replace(" ", separator);
+		return spl;
+	}
+	
+}

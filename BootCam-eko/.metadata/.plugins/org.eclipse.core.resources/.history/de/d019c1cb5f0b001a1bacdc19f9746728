@@ -1,0 +1,25 @@
+package LatihanSoal;
+
+public class Soal4 {
+
+	public static void main(String[] args) {
+		// Kaos Kaki
+		kaosKaki("11111222");
+
+	}
+
+	public static void kaosKaki(String a_str) {
+		int pjg = a_str.length();
+		int temp = 0;
+
+		for (int i = 0; i < pjg; i++) {
+			char kata = a_str.charAt(i);
+			if(a_str.charAt(i)==a_str.charAt(i+1)) {
+				temp++;
+				a_str.charAt(i);
+				System.out.println(temp);
+			}
+		}
+	}
+
+}

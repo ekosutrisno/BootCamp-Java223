@@ -1,0 +1,24 @@
+package Pertemuan1;
+
+public class Latihan3 {
+
+	public static void main(String[] args) {
+		int jumlah = 0;
+		String hasil = "";
+		int b = 0, c = 0;
+		for (int a = 1; a <= 10; a++) {
+			if (a % 2 == 1) {
+				b = a;
+			}
+			if (a % 2 == 0) {
+				c = a-1;
+			}
+			jumlah = b + c;
+			
+			if (a!= 2 && a % 2 == 1) {
+				// System.out.println(hasil);
+				System.out.println(b + " + " + c + " = " + jumlah);
+			}
+		}
+	}
+}

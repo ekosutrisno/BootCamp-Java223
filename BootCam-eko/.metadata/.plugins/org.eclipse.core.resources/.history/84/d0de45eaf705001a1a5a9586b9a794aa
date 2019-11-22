@@ -1,0 +1,55 @@
+package Pertemuan1;
+
+public class Latihan2 {
+
+	public static void main(String[] args) {
+
+		jumlahAngka();
+		System.out.println();
+		kurangAngka();
+		System.out.println();
+		kaliAngkaUp();
+		System.out.println();
+		kaliAngkaIn();
+	}
+
+	private static void jumlahAngka() {
+		int jumlah = 0;
+		for (int a = 1; a <= 5; a++) {
+			System.out.println(a);
+			jumlah += a;
+		}
+		System.out.println(jumlah);
+	}
+
+	private static void kurangAngka() {
+		int kurang=0;
+		for (int a = 5; a > 0; a--) {
+			System.out.println(a);
+			kurang += a;
+		}
+		System.out.println(kurang);
+	}
+	
+	private static void kaliAngkaIn() {
+		int kali = 1;
+		for (int a = 10; a >1; a--) {
+			if(a%2 == 0) {
+			System.out.println(a);
+			kali *= a;
+			}
+		}
+		System.out.println(kali);
+	}
+	private static void kaliAngkaUp() {
+		int kali = 1;
+		for (int a = 1; a<=10; a++) {
+			if(a % 2 == 1) {
+			System.out.println(a);
+			kali *= a;
+			}
+		}
+		System.out.println(kali);
+	}
+
+}

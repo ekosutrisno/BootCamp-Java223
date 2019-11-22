@@ -1,0 +1,17 @@
+package Pertemuan2;
+
+public class LatihanSoalC {
+
+	public static void main(String[] args) {
+		int a = 1, b = 1, c = 1;
+		int x, y, z;
+		for (int i = 0; i <= 7; i++) {
+			for (int j = 0; j <= 7; j++) {
+				System.out.print(a + " " + b);
+			}
+			System.out.println();
+		}
+
+	}
+
+}

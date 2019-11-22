@@ -1,0 +1,13 @@
+package LatihanSoal;
+
+import java.util.Scanner;
+
+public class Soal1 {
+
+	public static void main(String[] args) {
+		Scanner inputUser = new Scanner(System.in);
+		System.out.print("Masukkan Angka: ");
+		int inputAngka = inputUser.nextInt();
+	}
+
+}

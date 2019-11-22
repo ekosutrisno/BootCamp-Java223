@@ -1,0 +1,42 @@
+package Pertemuan1;
+
+public class Latihan2 {
+
+	public static void main(String[] args) {
+
+		jumlahAngka();
+		System.out.println();
+		kurangAngka();
+
+	}
+
+	private static void jumlahAngka() {
+		int jumlah = 0;
+		for (int a = 1; a <= 5; a++) {
+			System.out.println(a);
+			jumlah += a;
+		}
+		System.out.println(jumlah);
+	}
+
+	private static void kurangAngka() {
+		int kurang=0;
+		for (int a = 5; a > 0; a--) {
+			System.out.println(a);
+			kurang += a;
+		}
+		System.out.println(kurang);
+	}
+	
+	private static void kaliAngka() {
+		int kurang = 0;
+		for (int a = 5; a > 0; a--) {
+			if(a%2==0) {
+			System.out.println(a);
+			kurang += a;
+			}
+		}
+		System.out.println(kurang);
+	}
+
+}

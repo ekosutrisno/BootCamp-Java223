@@ -1,0 +1,39 @@
+package ArrayPackage;
+
+import java.util.Scanner;
+
+public class Array4 {
+
+	public static Scanner scn;
+
+	public int[][] inputMatrik(int[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				scn = new Scanner(System.in);
+				System.out.print("Element Matrik ke [" + i + "][" + j + "] : ");
+				arr[i][j] = scn.nextInt();
+			}
+		}
+		return arr;
+	}
+
+	public void cetakMatrik(int[][] arr) {
+		for (int a = 0; a < arr.length; a++) {
+
+			for (int b = 0; b < arr[a].length; b++) {
+				System.out.print(arr[a][b] + "  ");
+			}
+			System.out.println();
+		}
+	}
+
+//	public void perkalianmatrik(int[][] satu, int[][] dua) {
+//		for (int m = 0; m <= 1; m++) {
+//			for (int n = 0; n <= 2; n++) {
+//				System.out.print(z[m][n] + "\t");
+//			}
+//			System.out.println("");
+//		}
+//	}
+
+}

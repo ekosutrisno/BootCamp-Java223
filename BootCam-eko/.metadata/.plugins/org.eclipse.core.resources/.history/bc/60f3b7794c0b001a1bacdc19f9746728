@@ -1,0 +1,23 @@
+package LatihanSoal;
+
+import java.util.Scanner;
+
+public class promoGojek {
+
+	private static Scanner inputUser;
+
+	public static void main(String[] args) {
+		// inisialisasi variabel
+		double harga, promo, pajak, min_beli;
+		int jarak = 12;
+		min_beli = 30000;
+		harga = 35000;
+		promo = 0.5;
+		pajak = 0.1;
+
+		// Memanggil Scanner
+		inputUser = new Scanner(System.in);
+
+	}
+
+}

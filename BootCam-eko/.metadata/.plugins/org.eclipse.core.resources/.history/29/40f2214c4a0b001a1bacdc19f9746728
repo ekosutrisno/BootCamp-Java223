@@ -1,0 +1,29 @@
+package LatihanSoal;
+
+import java.util.Scanner;
+
+public class Soal1 {
+	private static Scanner inputUser;
+
+	public static void main(String[] args) {
+		inputUser = new Scanner(System.in);
+		System.out.print("Masukkan Angka: ");
+		int inputAngka = inputUser.nextInt();
+		
+		System.out.print("Hasil Faktor Dari "+ inputAngka+" adalah ");
+		
+	}
+
+	public static void pohonFakor(int angka) {
+		int faktor = 0;
+		int hasil_faktrornya = 0;
+		for (int i = 1; i <= angka; i++) {
+			faktor++;
+			if (angka % faktor == 0) {
+				hasil_faktrornya = faktor;
+				System.out.print(hasil_faktrornya + " ");
+			}
+		}
+	}
+
+}

@@ -1,0 +1,36 @@
+package Pertemuan1;
+
+import java.util.Scanner;
+
+public class ArrayMultiDimensi {
+	public static Scanner input;
+	
+	static void main(String[] args) {
+
+		int matrikA[][] = { { 1, 2, 3 }, { 4, 5, 6, 7 }, { 8, 9, 7 } };
+
+		
+		
+	}
+
+	public static void printArrayMD(int[][] arr) {
+		for (int a = 0; a < arr.length; a++) {
+
+			for (int b = 0; b < arr[a].length; b++) {
+				System.out.print(arr[a][b]);
+			}
+			System.out.println();
+		}
+
+	}
+	
+	public static int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			hasil[i] = input.nextInt();
+		}
+		return hasil;
+	}
+
+}

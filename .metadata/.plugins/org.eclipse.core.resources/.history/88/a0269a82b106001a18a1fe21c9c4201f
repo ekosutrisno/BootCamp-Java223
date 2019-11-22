@@ -1,0 +1,67 @@
+package Pertemuan1;
+
+import java.util.Scanner;
+public class Latihan7 {
+
+	public static void main(String[] args) {
+
+		// Cara satu
+		System.out.println("#Membuat Array, menambahkan isinya dan panggil isinya");
+		int[] angka = new int[5];
+		int x = 9;
+		for (int i = 0; i < 5; i++) {
+			angka[i] = x++;
+		}
+		System.out.println(angka[3]);
+		System.out.println();
+
+		// Cara dua
+		System.out.println("#Menampilkan Array");
+		int[] angka2 = { 1, 3, 5, 7, 9, 11, 13 };
+		for (int i = 0; i < 7; i++) {
+			System.out.println(angka2[i]);
+		}
+
+		// Cara tiga
+		System.out.println("\n#Menjumlahkan Array");
+		int a[] = { 5, 8, 9, 3 };
+		int b[] = { 2, 1, 9, 7 };
+		int c[] = new int[4];
+
+		for (int i = 0; i < 4; i++) {
+			c[i] = a[i] + b[i];
+			System.out.println(c[i]);
+		}
+
+		System.out.println("\n#Mengecek Array Array");
+		for (int i = 0; i < 4; i++) {
+			if (a[i] > b[i]) {
+				c[i] = a[i] + b[i];
+				c[i] *= 2;
+			} else {
+				c[i] = a[i] + b[i];
+			}
+			System.out.println(c[i]);
+		}
+
+		System.out.println("\n#Menampilkan Array String bentuk Tabel");
+
+		String warna[] = { "red", "orange", "green" };
+		String buah[] = { "Apple", "Orange", "Water Melon" };
+		String harga[] = { "1000", "1500", "2500" };
+
+		for (int i = 0; i < 3; i++) {
+
+			if (Integer.parseInt(harga[i]) > 1000) {
+				System.out.println("-------------------------------");
+				System.out.printf("%s \t| %s \t| %s \n", warna[i], buah[i], harga[i]);
+			}
+		}
+		
+		Scanner input = new Scanner(System.in);
+		
+		System.out.println("Masukkan Nilai Int: ");
+		int ak1 = input.nextInt();			
+	}
+
+}

@@ -1,0 +1,59 @@
+package ArrayPackage;
+
+import java.util.Scanner;
+
+//Membuat variabel Public
+
+public class Array2 {
+	public String str = "Ada Apa Dengan Cinta";
+	private Scanner input;
+
+	// Ambil Array integer
+	public int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			hasil[i] = input.nextInt();
+		}
+		return hasil;
+	}
+
+	// Ambil Array String
+	public String[] tulisNama(int inp) {
+		String[] hasil = new String[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			hasil[i] = input.nextLine();
+		}
+		return hasil;
+	}
+
+	// Mengurutkan Array
+	public int[] bubleShort(int[] arr) {
+		int cek;
+		for (int i = 1; i < arr.length; i++) {
+			for (int j = i; j > 0; j--) {
+				if (arr[j] < arr[j - 1]) {
+					cek = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = cek;
+				}
+			}
+		}
+		return arr;
+	}
+
+	public double cariMedian(int[] median) {
+		Array2 a2 = new Array2();
+		int[] cek = a2.bubleShort(median);
+		double me = 0.0;
+		
+		if (median.length % 2 == 1) {
+			me = cek[median.length / 2];
+		} else {
+			me = ((double)(cek[median.length / 2] + ((cek[median.length / 2)-1]/2))));
+		}
+		return me;
+	}
+
+} // Ending Class Array2

@@ -1,0 +1,158 @@
+package Pertemuan2;
+
+import java.util.Scanner;
+
+public class LatihanLive {
+
+	private static Scanner scn;
+
+	public static void main(String[] args) {
+//		pangkat(9);
+//		System.out.println();
+//		jumlah(9);
+//		System.out.println();
+//		kurang(9);
+//		System.out.println();
+//		kaliN(5);
+//		System.out.println();
+//		faktorial(5);
+		System.out.println("======================");
+		System.out.print("Masukkan Jumlah Baris: ");
+		int baris1 = scn.nextInt();
+		System.out.print("Masukkan Jumlah Kolom: ");
+		int kolom1 = scn.nextInt();
+		
+		System.out.println("======================");
+		System.out.print("Masukkan Jumlah Baris: ");
+		int baris2 = scn.nextInt();
+		System.out.print("Masukkan Jumlah Kolom: ");
+		int kolom2 = scn.nextInt();
+		
+		int[][] matrikA = new int[baris1][kolom1];
+		int[][] matrikB = new int[baris2][kolom2];
+
+		int[][] hasilMatrik = kaliMatrik(matrikA, matrikB);
+		cetakMatrik(hasilMatrik);
+
+	}
+
+	// Pangkan n
+	public static void pangkat(int n) {
+		int x = 1;
+		for (int a = 1; a <= n; a++) {
+			x *= 2;
+			System.out.println(a + " " + x);
+		}
+	}
+
+	// jumlah n
+	public static void jumlah(int n) {
+		int x = 1;
+		for (int a = 1; a <= n; a++) {
+			x += 2;
+			System.out.println(a + " " + x);
+		}
+	}
+
+	// kurang n
+	public static void kurang(int n) {
+		int x = 1;
+		for (int a = 1; a <= n; a++) {
+			x -= 2;
+			System.out.println(a + " " + x);
+		}
+	}
+
+	// Kali n
+	public static void kaliN(int n) {
+		int kali = 1;
+		for (int a = 1; a <= n; a++) {
+			if (a % 2 == 1) {
+				kali = a * 3;
+			} else {
+				kali = a * 2;
+			}
+			System.out.println(kali);
+		}
+	}
+
+	// Faktorial
+	public static void faktorial(int n) {
+		int faktor = 1;
+		for (int i = 1; i <= n; i++) {
+			if (i == 0) {
+				System.out.println("0! adalah " + faktor);
+			} else {
+				faktor = i * faktor;
+				System.out.println(i + "! adalah " + faktor);
+			}
+
+		}
+
+	}
+
+	public static int[][] kaliMatrik(int[][] a, int[][] b) {
+		int baris1 = a.length;
+		int kolom1 = a[0].length;
+		int baris2 = b.length;
+		int kolom2 = b[0].length;
+		int[][] hasil = new int[baris1][baris2];
+		int simpan;
+
+		// ngecek kondisi
+		if (kolom1 == baris2) {
+			// perulangan
+			int i = 0;
+			while (i < baris1) {
+				int j = 0;
+				while (j < kolom2) {
+					simpan = 0;
+					int k = 0;
+					while (k < kolom1) {
+						simpan += a[i][k] * b[k][j];
+						k++;
+					}
+					hasil[i][j] = simpan;
+					j++;
+				}
+
+				i++;
+			}
+		} else {
+			System.out.println("Kolom Matrik 1 != Baris Matrik 2");
+		}
+		return hasil;
+	}
+
+	public static int[][] inputMatrik(int[][] arr) {
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; j < arr[i].length; j++) {
+				scn = new Scanner(System.in);
+				System.out.print(arr[i][j]);
+				arr[i][j] = scn.nextInt();
+			}
+		}
+
+		return arr;
+	}
+
+	private static void cetakMatrik(int[][] matrik) {
+		int baris = matrik.length;
+		int kolom = matrik[0].length;
+
+		for (int a = 0; a < baris; a++) {
+			System.out.print("[");
+			for (int b = 0; b < kolom; b++) {
+				System.out.print(matrik[a][b]);
+				if (b < kolom - 1) {
+					System.out.print(" ");
+				} else {
+					System.out.print("]");
+				}
+			}
+			System.out.println();
+		}
+
+	}
+
+}

@@ -1,0 +1,76 @@
+package Pertemuan2;
+
+public class LatihanSoalB {
+
+	public static void main(String[] args) {
+		soal01();
+		System.out.println();
+		soal02();
+		System.out.println();
+		soal03();
+		System.out.println();
+
+	}
+
+	private static void soal01() {
+		int data = 1;
+		for (int a = 0; a <= 7; a++) {
+			if (a == 0) {
+				a = 1;
+				System.out.print(a + " ");
+			} else {
+				int b = data * 3;
+				System.out.print(b + " ");
+				data = b;
+			}
+		}
+	}
+
+	private static void soal02() {
+		int data = 1;
+		for (int a = 1; a <= 7; a++) {
+			if (a == 1) {
+				System.out.print(data + " ");
+			} else {
+				if (a % 3 == 0) {
+					System.out.print("-" + (data *= 3) + " ");
+				} else {
+					int b = data * 3;
+					data = b;
+					System.out.print(b + " ");
+				}
+			}
+		}
+	}
+
+	private static void soal03(int n1, int n2, int n3) {
+		int data = 1;
+		for (int a = 0; a < n1; a++) {
+			if (a == 0 && a == n1-1) {
+				System.out.print(n3);
+			} else {
+				int b = n2 * n3;
+				System.out.print(b + " ");
+				data = b;
+			}
+		}
+	}
+
+	private static void soal04() {
+		int data1 = 1, data2 = 1;
+		for (int a = 0; a < 7; a++) {
+			if (a == 0) {
+				a = data1;
+				System.out.print(a + " ");
+			} else if (a % 2 == 0) {
+				int a1 = data1 + 1;
+				System.out.print(a1 + " ");
+			} else {
+				int a2 = data2 + 5;
+				System.out.print(a2 + " ");
+				data2 = a2;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,39 @@
+package LatihanSoal;
+
+public class Soal5 {
+
+	public static void main(String[] args) {
+		fibonaci_2(5);
+		System.out.println();
+		fibonaci_3(5);
+
+	}
+
+	public static void fibonaci_2(int angka) {
+		int fn = 0;
+		int fn1 = 1;
+		int fn2 = 0;
+		for (int i = 0; i < angka; i++) {
+			fn = fn1 + fn2;
+			fn1 = fn2;
+			fn2 = fn;
+			System.out.print(fn + " ");
+		}
+	}
+
+	public static void fibonaci_3(int angka) {
+		int fn = 0;
+		int fn1 = 1;
+		int fn2 = 0;
+		int fn3 = 0;
+		int fn4=0;
+		for (int i = 0; i < angka; i++) {
+			fn = fn1 + fn2 + fn3;
+			fn1 = fn2;
+			fn2 = fn3;
+			fn3 = fn4;
+			fn4=fn;
+			System.out.print(fn + " ");
+		}
+	}
+}

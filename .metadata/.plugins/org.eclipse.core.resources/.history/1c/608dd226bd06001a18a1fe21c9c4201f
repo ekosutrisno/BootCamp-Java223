@@ -1,0 +1,5 @@
+package ArrayPackage;
+
+public class Array2 {
+public String str ="Ada Apa Dengan Cinta";
+}

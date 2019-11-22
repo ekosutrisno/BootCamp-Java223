@@ -1,0 +1,15 @@
+package LatihanSoal;
+
+public class promoGojek {
+
+	public static void main(String[] args) {
+		double harga, promo, pajak, min_beli;
+		int jarak = 12;
+		min_beli =30000;
+		harga = 35000;
+		promo = 0.5;
+		pajak = 0.1;
+
+	}
+
+}

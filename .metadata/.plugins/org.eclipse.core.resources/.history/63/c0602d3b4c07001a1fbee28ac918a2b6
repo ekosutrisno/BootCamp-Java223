@@ -1,0 +1,46 @@
+package ArrayPackage;
+
+import java.util.Scanner;
+
+//Membuat variabel Public
+
+public class Array2 {
+	public String str = "Ada Apa Dengan Cinta";
+	private Scanner input;
+
+	public int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			System.out.print("Index ke " + i + " : ");
+			hasil[i] = input.nextInt();
+		}
+		return hasil;
+	}
+
+	public String[] tulisNama(int inp) {
+		String[] hasil = new String[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			System.out.print("Nama " + i + " : ");
+			hasil[i] = input.nextLine();
+		}
+		return hasil;
+	}
+
+	public int[] bubleShort(int[] arr) {
+		int[] result = new int[arr.length];
+		int cek;
+		for(int i=1;i < result; i++) {
+			for(int j=i;j>0;j++) {
+				if(arr[j]<arr[j-1]) {
+					cek = arr[j];
+					arr[j]=arr[j-1];
+					arr[j-1]=cek;
+				}
+			}
+		}
+		return result;
+	}
+	
+}

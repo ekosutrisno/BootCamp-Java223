@@ -1,0 +1,22 @@
+package com.data;
+
+public class Jurusan {
+	private static String namaJurusan;
+	private String kode_jurusan;
+
+	public String getNamaJurusan() {
+		return namaJurusan;
+	}
+
+	public void setNamaJurusan(String nama) {
+		this.namaJurusan = nama;
+	}
+
+	public String getKode_jurusan() {
+		return kode_jurusan;
+	}
+
+	public void setKode_jurusan(String kode_jurusan) {
+		this.kode_jurusan = kode_jurusan;
+	}
+}

@@ -1,0 +1,21 @@
+package ArrayPackage;
+
+import java.util.Scanner;
+
+//Membuat variabel Public
+
+public class Array2 {
+	public String str = "Ada Apa Dengan Cinta";
+	private Scanner input;
+	
+
+	public int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for (int i = 0; i < hasil.length; i++) {
+			input = new Scanner(System.in);
+			hasil[i] = input.nextInt();
+		}
+		return hasil;
+	}
+
+}

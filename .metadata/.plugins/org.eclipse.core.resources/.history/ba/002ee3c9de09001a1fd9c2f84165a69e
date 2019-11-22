@@ -1,0 +1,20 @@
+package com.main;
+
+import com.data.Mahasiswa;
+import com.data.MataKuliah;
+import com.data.Nilai;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Mahasiswa mhs = new Mahasiswa();
+		MataKuliah matkul = new MataKuliah();
+		Nilai nilai = new Nilai();
+		mhs.setNama("Eko Sutrisno");
+		matkul.setKode_mk("112");
+		
+		System.out.println(mhs.getNama());
+		System.out.println(matkul.getKode_mk());
+	}
+
+}

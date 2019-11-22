@@ -1,0 +1,12 @@
+package Pertemuan2;
+
+public class LatihanSoalC {
+
+	public static void main(String[] args) {
+		double botol = 1, gelas = 1, teko = 1, cangkir = 1;
+		botol = 2 * gelas;
+		teko = 25 * cangkir;
+		gelas = 2.5 * cangkir;
+	}
+
+}

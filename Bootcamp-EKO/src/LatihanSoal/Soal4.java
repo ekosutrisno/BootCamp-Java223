@@ -1,0 +1,27 @@
+package LatihanSoal;
+
+public class Soal4 {
+
+	public static void main(String[] args) {
+		int[] sepatu = { 1, 2, 2, 1, 1, 2, 2, 1, 7, 8, 8, 1,7,7, 7,9,9};
+		System.out.println("Ada " + kaosKaki(sepatu) + " pasang Kaos Kaki");
+	}
+
+	public static int kaosKaki(int[] a_str) {
+		int pjg = a_str.length;
+		int temp = 0;
+		for (int i = 0; i < pjg; i++) {
+			for (int j = i + 1; j < pjg; j++) {
+				if (a_str[i] != 0) {
+					if (a_str[i] == a_str[j]) {
+						temp++;
+						a_str[i] = 0;
+						a_str[j] = 0;
+					}
+				}
+			}
+		}
+		return temp;
+	}
+
+}

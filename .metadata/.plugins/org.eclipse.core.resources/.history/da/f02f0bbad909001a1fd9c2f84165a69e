@@ -1,0 +1,8 @@
+package com.data;
+
+public class Nilai {
+
+	private String kode_mk;
+	private String nim;
+	private float nilai;
+}

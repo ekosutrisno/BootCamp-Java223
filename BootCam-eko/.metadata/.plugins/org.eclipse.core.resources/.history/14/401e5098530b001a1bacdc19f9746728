@@ -1,0 +1,22 @@
+package LatihanSoal;
+
+public class Soal3 {
+	public static void main(String[] args) {
+		int naik = 0;
+		int turun = 0;
+		int cek = 0;
+
+	}
+
+	public static void ududD(String str) {
+		String kalimat = str.toLowerCase();
+		String[] myStr = str.split(" ");
+		int naik = 0;
+		int turun = 0;
+		int cek = 0;
+		for (int a = 0; a < myStr.length; a++) {
+			
+		}
+
+	}
+}

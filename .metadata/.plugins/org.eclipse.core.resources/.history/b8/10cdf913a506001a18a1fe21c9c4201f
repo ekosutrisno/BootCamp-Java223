@@ -1,0 +1,55 @@
+package Pertemuan1;
+
+public class Latihan6 {
+
+	public static void main(String[] args) {
+
+		baris_Kol1(8);
+		baris_Kol2(8);
+		System.out.println();
+		baris_Kol3(6,7);
+	}
+
+	private static void baris_Kol1(int k) {
+
+		for (int a = 0; a <= k; a++) {
+
+			for (int b = 0; b < a; b++) {
+				if (a <= b) {
+					System.out.print("");
+				} else {
+					System.out.print(a + "-" + b + " ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void baris_Kol2(int k) {
+		int x = 0;
+		for (int a = 0; a <= k; a++) {
+
+			for (int b = 0; b < a; b++) {
+				if (a <= b) {
+					System.out.print(" ");
+				} else {
+					System.out.print(a + "-" + b + "-" + x + " ");
+					x += 5;
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	private static void baris_Kol3(int b, int k) {
+		int x = 0;
+		for (int a = 2; a <= b; a++) {
+			for (int b1 = 0; b1 < k; b1++) {
+				System.out.print(a);
+			}
+			System.out.println();
+		}
+
+	}
+
+}

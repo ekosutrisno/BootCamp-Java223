@@ -1,0 +1,36 @@
+//Latihan Query Menggunakan PostgreSQL
+
+--CREATE TABLE
+CREATE TABLE pekerjaan 
+(
+id serial,
+kode_pekerjaan CHARACTER (5) PRIMARY KEY NOT NULL,
+nama_pekerja CHARACTER VARYING(60),
+tanggal_lahir DATE,
+gender_pekerja CHARACTER(1),
+alamat_pekerja CHARACTER VARYING(255),
+umur_pekerja integer,
+agama_pekerja CHARACTER VARYING
+)
+
+--INSERT DATA
+INSERT INTO pekerjaan
+(kode_pekerjaan, nama_pekerja, tanggal_Lahir, gender_pekerja, alamat_pekerja,
+ umur_pekerja, agama_pekerja) 
+ VALUES
+('P003','Joko','1980-08-22','L','Desa Pulau Nanas','29','Kristen'
+),
+('P004','Suwidi','1977-10-22','L','Desa Pulau Kemuning','49','Islam'
+)
+
+--Call dan View Data
+SELECT * FROM pekerjaan;
+
+--UPDATE DATA
+UPDATE pekerjaan 
+SET tanggal_lahir='1960-09-12',alamat_pekerja='Desa Simpang Luas', umur_pekerja='27'
+where kode_pekerjaan ='P003'
+
+--DELETE DATA
+DELETE FROM pekerjaan WHERE id>3
+

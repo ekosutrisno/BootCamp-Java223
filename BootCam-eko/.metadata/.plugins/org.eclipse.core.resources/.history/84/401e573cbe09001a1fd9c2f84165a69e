@@ -1,0 +1,37 @@
+package Pertemuan2;
+
+public class LatihanString {
+
+	public static void main(String[] args) {
+
+		String a = "Xsis";
+		String b = "Academy";
+		System.out.println(tampilString(a, b));
+		System.out.println(tampilKata(a));
+		System.out.println(replaceInput("Eko Sutrisno", "----"));
+System.out.println(replaceInput("Makan Nasi", " Sama "));
+	}
+
+	public static String tampilString(String a, String b) {
+		String A = a.substring(0, 1);
+		String B = b.substring(b.length() - 1);
+		return A + A + a + " " + b + B + B;
+	}
+
+	public static String tampilKata(String input) {
+		String A = input.substring(0, 1);
+		String B = input.substring(input.length() - 1);
+		return A + A + input + B + B;
+	}
+	
+	public static  String replaceInput(String input, String separator) {
+	String spl = input.replaceAll(" ", separator);
+		return spl;
+	}
+	
+	public static  String replacePertama(String input, String pengganti) {
+	String spl = input.replaceFirst(" ", pengganti);
+		return spl;
+	}
+	
+}

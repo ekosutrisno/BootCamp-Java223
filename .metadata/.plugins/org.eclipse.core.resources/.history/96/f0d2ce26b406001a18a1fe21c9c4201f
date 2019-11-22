@@ -1,0 +1,17 @@
+package Pertemuan1;
+
+public class Latihan8 {
+
+	public static void main(String[] args) {
+		
+
+	}
+
+	private static int[] ambilArray(int inp) {
+		int[] hasil = new int[inp];
+		for(int i=0;i<hasil.length;i++) {
+			
+		}
+	}
+	
+}

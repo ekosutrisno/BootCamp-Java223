@@ -1,0 +1,51 @@
+package MainPackage;
+
+import java.util.Scanner;
+
+import ArrayPackage.Array1;
+import ArrayPackage.Array2;
+
+public class MainClass {
+
+	private static Scanner scn;
+
+	public static void main(String[] args) {
+		Array1 arr = new Array1();
+		Array2 arr2 = new Array2();
+		/*
+		int[] angka = { 1, 4, 5, 9, 2, 3, 4, 5 };
+		int[] cek = arr2.bubleShort(angka);
+		arr.printArray(cek);
+		 */		
+		
+		System.out.println();//Baris baru
+
+		//Mengecek dan mengurutkan Array
+		int[] a = arr2.ambilArray(5);
+		int[] cek = arr2.bubleShort(a);
+		arr.printArray(cek);
+		int[] median = arr2.cariMedian(cek);
+		System.out.println();
+		System.out.println(median);
+
+		System.out.println();//Baris Baru
+
+		//Mengambil input String
+		String[] b = arr2.tulisNama(5);
+		arr.printArray(b);
+
+		// Array to Integer Menggunakan Split
+		scn = new Scanner(System.in);
+		String inp = scn.nextLine();
+		String arrO[] = inp.split(",");
+		int arrx[] = new int[inp.length()];
+
+		for (int i = 0; i < arrO.length; i++) {
+			arrx[i] = Integer.parseInt(arrO[i]);
+		}
+		arr.printArray(arrO);
+		arr.printArray(arrx);
+
+	}
+
+}

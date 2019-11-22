@@ -1,0 +1,17 @@
+package com.main;
+
+import com.data.Mahasiswa;
+import com.data.MataKuliah;
+import com.data.Nilai;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Mahasiswa mhs = new Mahasiswa();
+		MataKuliah matkul = new MataKuliah();
+		Nilai nilai = new Nilai();
+		mhs.setNama("Eko Sutrisno");
+		System.out.println(mhs.getNama());
+	}
+
+}

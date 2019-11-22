@@ -1,0 +1,23 @@
+package Pertemuan1;
+
+public class Latihan5 {
+
+	public static void main(String[] args) {
+		int kali;
+		for (int a = 1; a <= 6; a++) {
+			for (int b = 0; b <= 6; b++) {
+				if (a == 0) {
+					System.out.print(b + "   ");
+				} else if (a == b) {
+					System.out.println(a);
+				} else {
+					kali = a * b;
+					System.out.println( kali);
+					
+				}
+
+			}
+			System.out.println();
+		}
+	}
+}

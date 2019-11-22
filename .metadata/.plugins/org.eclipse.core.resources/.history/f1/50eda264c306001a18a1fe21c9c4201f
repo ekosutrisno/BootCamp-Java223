@@ -1,0 +1,20 @@
+package MainPackage;
+
+import ArrayPackage.Array1;
+import ArrayPackage.Array2;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Array1 arr = new Array1();
+		arr.printArray();
+		
+		Array2 arr2 = new Array2();
+		int[] a = arr2.ambilArray(5);
+		arr.printArray(a);
+		
+		String[] b = arr2.tulisNama(5);
+		arr.printArray(b);
+	}
+
+}

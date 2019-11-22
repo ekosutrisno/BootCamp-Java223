@@ -1,0 +1,41 @@
+package LatihanSoal;
+
+public class Soal3 {
+	public static void main(String[] args) {
+		String tes1 = "u d u u u d d u";
+		String tes2 = "a b c d e f g";
+		ududD(tes1);
+		System.out.println();
+		ududD(tes2);
+	}
+
+	public static void ududD(String str) {
+		String[] myStr = str.split(" ");
+		int naik = 0;
+		int turun = 0;
+		int cek = 0;
+		if (str.toLowerCase().contains("u") && str.toLowerCase().contains("d")) {
+
+			for (int a = 0; a < myStr.length; a++) {
+				if (myStr[a].equalsIgnoreCase("U")) {
+					if (cek == 0) {
+						cek++;
+						naik++;
+					} else {
+						cek++;
+					}
+				} else if (myStr[a].equalsIgnoreCase("D")) {
+					if (cek == 0) {
+						cek--;
+						turun++;
+					} else {
+						cek--;
+					}
+				}
+			}
+			System.out.println("Naik: " + naik + "\nTurun: " + turun);
+		} else {
+			System.out.println("Tidak ada hurup 'U' atau 'D'");
+		}
+	}
+}

@@ -1,0 +1,58 @@
+package com.main;
+
+import com.data.Jurusan;
+import com.data.Mahasiswa;
+import com.data.MataKuliah;
+import com.data.Nilai;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		// instansiasi dan memanggil kelas
+		Mahasiswa mhs = new Mahasiswa();
+		MataKuliah matkul = new MataKuliah();
+		Nilai nilai = new Nilai();
+		Jurusan jurusan = new Jurusan();
+
+		// Set Properti Mahasiswa
+		mhs.setNama("Eko Sutrisno");
+		mhs.setGender(true);
+		mhs.setNim("1511050232");
+		mhs.setAlamat("Palembang, Sumatera Selatan");
+
+		// Set properti MataKuliah
+		matkul.setNama("Aljabar 1");
+		matkul.setKode_mk("A-243");
+
+		// Set properti Nilai
+		nilai.setKode_mk("a-243");
+		nilai.setNim("1511050232");
+		nilai.setNilai(90);
+
+		//set properti jurusan
+		
+		System.out.println();// Memanggil Properti Mahasiswa
+		System.out.println("Nama\t:"+mhs.getNama());
+		System.out.println("Gender\t:"+mhs.isGender());
+		System.out.println("NIM\t:"+mhs.getNim());
+		System.out.println("Alamat\t:"+mhs.getAlamat());
+
+		System.out.println();// Memanggil Properti Mata Kuliah
+		System.out.println(matkul.getNama());
+		System.out.println(matkul.getKode_mk());
+
+		System.out.println();// Memanggil Properti Nilai
+		System.out.println(nilai.getKode_mk());
+		System.out.println(nilai.getNim());
+		System.out.println(nilai.getNilai());
+
+	}
+
+	public static String getGenderName(boolean gender) {
+		if (gender == true)
+			return "Laki-laki";
+		else
+			return "Perempuan";
+	}
+
+}

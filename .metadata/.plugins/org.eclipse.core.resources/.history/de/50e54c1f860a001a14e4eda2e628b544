@@ -1,0 +1,26 @@
+package Pertemuan2;
+
+public class LatihanSoalC {
+
+	public static void main(String[] args) {
+		matrikKotak(6, 6);
+
+	}
+
+	public static void matrikKotak(int baris, int kolom) {
+		int x = 1, z = 1, k = 1, l = 3;
+		for (int i = 0; i <= baris; i++) {
+			for (int j = 0; j <= kolom; j++) {
+				if (i == 0 && j == 3) {
+					System.out.print("3"+"\t");
+				} else if (i == 1 && i == 5 && j == 0 && j == kolom) {
+					System.out.print("3\t");
+				} else {
+					System.out.print(" ");
+				}
+			}
+			System.out.println("\t");
+		}
+	}
+
+}

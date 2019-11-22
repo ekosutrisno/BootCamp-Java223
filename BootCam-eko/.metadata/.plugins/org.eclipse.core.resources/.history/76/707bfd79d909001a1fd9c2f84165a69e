@@ -1,0 +1,7 @@
+package com.data;
+
+public class MataKulia {
+
+	private String nama;
+	private String kode_mk;
+}

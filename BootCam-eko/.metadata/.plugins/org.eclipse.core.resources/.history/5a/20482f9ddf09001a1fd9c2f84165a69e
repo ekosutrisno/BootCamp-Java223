@@ -1,0 +1,26 @@
+package com.main;
+
+import com.data.Mahasiswa;
+import com.data.MataKuliah;
+import com.data.Nilai;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Mahasiswa mhs = new Mahasiswa();
+		MataKuliah matkul = new MataKuliah();
+		Nilai nilai = new Nilai();
+
+		mhs.setNama("Eko Sutrisno");
+		mhs.setGender(true);
+		mhs.setNim("1511050232");
+		mhs.setAlamat("Palembang, Sumatera Selatan");
+
+		System.out.println(mhs.getNama());
+		System.out.println(mhs.isGender());
+		System.out.println(mhs.getNim());
+		System.out.println(mhs.getAlamat());
+
+	}
+
+}

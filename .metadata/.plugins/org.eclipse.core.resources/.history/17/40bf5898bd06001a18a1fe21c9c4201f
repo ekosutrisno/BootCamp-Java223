@@ -1,0 +1,14 @@
+package MainPackage;
+
+import ArrayPackage.Array1;
+import ArrayPackage.Array2;
+
+public class MainClass {
+
+	public static void main(String[] args) {
+		Array1 arr = new Array1();
+		arr.printArray();
+		arr.printArray2();
+	}
+
+}
