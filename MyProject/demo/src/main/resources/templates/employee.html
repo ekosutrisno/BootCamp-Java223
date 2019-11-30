@@ -1,0 +1,203 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Employee</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/Ionicons/css/ionicons.min.css">
+    <link rel="stylesheet" href="assets/iCheck/all.css">
+    <link rel="stylesheet" href="assets/adminlte/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="assets/adminlte/css/skins/_all-skins.min.css">
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+
+</head>
+
+<body class="hold-transition skin-blue layout-top-nav">
+    <div class="wrapper">
+        <header class="main-header">
+            <nav class="navbar navbar-static-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="" class="navbar-brand"><b>Batch</b>223</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <div class="content-wrapper">
+            <div class="container">
+                <section class="content-header">
+                    <h1> Data Employee</h1>
+                </section>
+                <section class="content">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="box box-primary">
+                                <div class="box-header with-border">
+                                    <button type="button" class="btn btn-primary" id="add_button" data-toggle="modal"
+                                        data-target="#exampleModal">Tambah</button>
+                                </div> <!-- /.box-header -->
+                                <div class="box-body">
+                                    <table class="table table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th style="width:10px">No</th>
+                                                <th>NIK</th>
+                                                <th>Name</th>
+                                                <th style="width:100px">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="data_rows"></tbody>
+                                    </table>
+                                </div> <!-- /.box-body -->
+                            </div> <!-- /.box -->
+                        </div> <!-- /.col -->
+                    </div> <!-- /.row -->
+
+                    <!-- BOTTOM SPACE -->
+                    <div style="margin-bottom: 150px"></div>
+                </section>
+
+
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered ">
+                        <div class="modal-content ">
+                            <div class="modal-header rounded">
+                                <h4 class="modal-title">Add Employee</h4>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span></button>
+
+                            </div>
+                            <div class="modal-body">
+
+                                <input type="hidden" id="aksi" value="">
+                                <form id="get_form_employee">
+                                    <input type="hidden" id="get_id" name="id" class="get_employee" value="">
+
+                                    <div class="form-group">
+                                        <label for="get_nik">NIK</label>
+                                        <input type="text" name="get_nik" id="get_nik" class="form-control get_employee"
+                                            required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_name">Name</label>
+                                        <input type="text" name="get_name" id="get_name"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_tanggalLahir">Tanggal Lahir</label>
+                                        <input type="text" name="get_tanggalLahir" id="get_tanggalLahir"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_tempatLahir">Tempat Lahir</label>
+                                        <input type="text" name="get_tempatLahir" id="get_tempatLahir"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_gender">Jenis Kelamin</label>
+                                        <input type="text" name="get_gender" id="get_gender"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_address">Address</label>
+                                        <input type="text" name="get_address" id="get_address"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="get_phone_number">Phone Number</label>
+                                        <input type="text" name="get_phone_number" id="get_phone_number"
+                                            class="form-control get_employee" required>
+                                    </div>
+                                </form>
+                            </div> <!-- /.modal-body -->
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary get_employee" id="save_button">Save
+                                </button>
+                            </div> <!-- /.modal-footer -->
+                        </div>
+                        <!-- /.modal-content -->
+                    </div>
+                    <!-- /.modal-dialog -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- jQuery 3 -->
+    <script src="assets/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 3.3.7 -->
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <!-- SlimScroll -->
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <!-- FastClick -->
+    <script src="assets/fastclick/lib/fastclick.js"></script>
+    <!-- iCheck 1.0.1 -->
+    <script src="assets/iCheck/icheck.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="assets/adminlte/js/adminlte.min.js"></script>
+    <!-- SweetAlert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            get_all_data();
+        });
+
+        function get_all_data() {
+            var number = 1;
+
+            $("#data_rows").html(
+                `<tr> <td colspan="4" style="text-align:center"><i>Loading...</i> </td></td></tr>`
+            )
+            $.ajax({
+                url: 'api/employee',
+                type: 'get',
+                contentType: "application/json",
+                success: function (result) {
+
+                    $("#data_rows").html("");
+                    if (result.length > 0) {
+                        for (let i = 0; i < result.length; i++) {
+                            $("#data_rows").append(
+                                `
+                        <tr>
+                        <td> ` + number + `</td>
+                        <td> ` + result[i].nik + `</td>
+                        <td> ` + result[i].fullName + `</td>
+
+                        <td>  
+                            <a class=" badge text-white badge-success mr-2" onclick="get_data_byid(` + result[i].id + `,'edit')">edit</a>
+                            <a class=" badge text-white badge-danger  mr-2" onclick="hapus(` + result[i].id + `)">hapus</a>
+                            <a class=" badge text-white badge-info  mr-2" onclick="get_data_byid(` + result[i].id + `,'detail')">detail</a>
+                        </td>
+                       </tr> `);
+                            number++;
+                        }
+                    } else {
+                        $("#data_rows").html(
+                            `<tr> <td colspan="4" style="text-align:center"><i>Loading...</i> </td></tr>`
+                        )
+                    }
+                },
+                error: function () {
+                    swal("", "Failed to fetch data")
+                }
+            });
+
+        };
+    </script>
+
+</body>
+
+</html>
