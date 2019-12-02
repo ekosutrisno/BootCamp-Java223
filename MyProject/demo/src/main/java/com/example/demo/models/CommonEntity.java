@@ -26,7 +26,6 @@ public class CommonEntity {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "modifed_on")
     private  Date modifedOn;
-
     @Column(name = "modifed_by")
     private String modifedBy;
 
