@@ -66,7 +66,7 @@ public class EmployeeService implements IEmployeeService {
     }
 
 //    @Override
-//    public EmployeeEntity updateDelete(EmployeeEntity employee, Long id){
+//    public EmployeeEntity updateDelete(EmployeeEntity employee){
 //
 //        EmployeeEntity employeeDetail = employeeRepository.findById(employee.getId()).get();
 //
@@ -75,7 +75,7 @@ public class EmployeeService implements IEmployeeService {
 //        employee.setCreatedOn(new Date());
 //        employee.setModifedBy("Eko Edit");
 //        employee.setModifedOn(new Date());
-//        return employeeRepository.save(employee);
+//        return employeeRepository.save(employeeDetail);
 //    }
 
 }

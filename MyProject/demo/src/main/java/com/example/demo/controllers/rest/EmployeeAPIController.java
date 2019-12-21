@@ -63,10 +63,10 @@ public class EmployeeAPIController {
    }
 
 //   @PutMapping
-//   public EmployeeDto deleteEmployee(@RequestBody EmployeeDto employeeDto, @PathVariable Long id) {
+//   public EmployeeDto deleteEmployee(@RequestBody EmployeeDto employeeDto) {
 //      EmployeeEntity employee = new EmployeeEntity();
 //      employee.setIsDelete(true);
-//      employeeService.updateDelete(employee, id);
+//      employeeService.updateDelete(employee);
 //      return employeeDto;
 //   }
 }

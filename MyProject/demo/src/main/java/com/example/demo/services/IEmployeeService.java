@@ -9,5 +9,5 @@ public interface IEmployeeService {
     EmployeeEntity getById(Long id);
     EmployeeEntity save(EmployeeEntity employeeEntity);
     EmployeeEntity update(EmployeeEntity employeeEntity);
-    //EmployeeEntity updateDelete(EmployeeEntity employeeEntity, Long id);
+    //EmployeeEntity updateDelete(EmployeeEntity employeeEntity);
 }

@@ -198,7 +198,7 @@
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" onclick="get_data_byid(`+ result[i].id + `,'edit')" >Edit</a></li>
-                            <li><a class="dropdown-item" onclick="get_data_byid(`+ result[i].id + `,'hapus')">Hapus</a></li>
+                            <li><a class="dropdown-item" onclick="get_data_byid(`+ result[i].id + `)">Hapus</a></li>
                             <li><a class="dropdown-item" onclick="get_data_byid(`+ result[i].id + `,'detail')" >Detail</a></li>
                         </ul>
                     </div>
@@ -241,9 +241,6 @@ function get_data_byid(id, action) {
             if (action == "detail") {
                 $(".modal-title").text("Detail Employee ");
                 $(".get_employee").attr("disabled", true);
-            } else if(action == "hapus"){
-             $(".modal-title").text("Delete Employee ");
-                $(".get_employee").text("Delete");
             } else {
                 $(".modal-title").text("Edit Employee");
                 $(".get_employee").attr("disabled", false);
