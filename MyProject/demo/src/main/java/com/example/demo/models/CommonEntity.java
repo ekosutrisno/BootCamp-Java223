@@ -26,7 +26,10 @@ public class CommonEntity {
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "modifed_on")
     private  Date modifedOn;
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2e3540f8efdd4596ee2ade7dadcc4e6151d49337
     @Column(name = "modifed_by")
     private String modifedBy;
 
